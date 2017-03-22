@@ -1,24 +1,26 @@
 .kitchen {
     background-image: url(../img/kitchen.svg);
     width: 100vw;
+    height: 60vh;
     background-size: contain;
     background-repeat: no-repeat;
     padding-top: 130px;
     padding-left: 60px;
+    position: relative;
 }
 
 .alvar {
     height: 300px;
+    position: absolute;
+    left: -10vw;
 }
 
-
-
 .move{
-    animation: moveanimation 1s ease-in infinite;
+    animation: moveanimation 1s ease-in 1;
 }
 
 @keyframes moveanimation{
     to{
-        transform: translate(-5vh);
+        transform: translate(90vh);
     }
 }
