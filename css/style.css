@@ -46,6 +46,19 @@
     }
 }
 
+/*Move from 30*/
+.movefromthirty{
+    animation: movefromthirty 2s forwards;
+}
+
+@keyframes movefromthirty{
+    0%{
+        transform: translate(30%);
+    }
+    100%{
+        transform: translate(100vw);
+    }
+}
 
 /* one jump*/
 

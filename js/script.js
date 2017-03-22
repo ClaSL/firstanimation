@@ -40,6 +40,18 @@ function removeClassMoveTo(){
 
 }
 
+/*Move from 30% Button*/
+
+let movefrom = document.querySelector("#moveFromThirty");
+
+movefrom.addEventListener("click", moveFromAction);
+
+function moveFromAction () {
+    console.log("I move from here");
+    alvarHero.classList.add("movefromthirty");
+}
+
+/*Remove from 30% Button*/
 
 /*Jump once*/
 
