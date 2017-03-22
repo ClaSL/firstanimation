@@ -5,22 +5,60 @@
     background-size: contain;
     background-repeat: no-repeat;
     padding-top: 130px;
-    padding-left: 60px;
     position: relative;
 }
 
 .alvar {
     height: 300px;
     position: absolute;
-    left: -10vw;
+    bottom: 0;
 }
 
-.move{
-    animation: moveanimation 1s ease-in 1;
+
+/* First move*/
+
+.move {
+    animation: moveanimation 2s ease-in;
 }
 
-@keyframes moveanimation{
-    to{
-        transform: translate(90vh);
+@keyframes moveanimation {
+    0% {
+        transform: translate(-200px);
+    }
+    100% {
+        transform: translate(100vw);
+    }
+}
+
+
+/*Move to 30*/
+
+.movetothirty {
+    animation: moveingto 2s forwards;
+}
+
+@keyframes moveingto {
+    0% {
+        transform: translate(-200px);
+    }
+    100% {
+        transform: translate(30%);
+    }
+}
+
+
+/* one jump*/
+
+.oneJump {
+    animation: herojump 2s ease-in forwards;
+}
+
+@keyframes herojump {
+    0%,
+    100% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 200px;
     }
 }
