@@ -53,9 +53,16 @@ function moveFromAction () {
 
 /*Remove from 30% Button*/
 
+alvarHero.addEventListener("animationend", removeMoveThirty);
+
+function removeMoveThirty(){
+    console.log("I go back to 30");
+    alvarHero.classList.remove("movefromthirty");
+}
+
 /*Jump once*/
 
-let oneJump = document.querySelector("oneJump_btn");
+let oneJump = document.querySelector("#oneJump_btn");
 
 oneJump_btn.addEventListener("click", makeHeroJump);
 
@@ -64,10 +71,6 @@ function makeHeroJump() {
     alvarHero.classList.add("oneJump");
 }
 
-function removeHeroJump() {
-    console.log("I was clicked");
-    alvarHero.classList.remove("oneJump");
-}
 
 /*Remove Jump once*/
 
@@ -76,4 +79,24 @@ alvarHero.addEventListener("animationend", removeClassJump);
 function removeClassJump() {
     console.log("I have to land");
     alvarHero.classList.remove("oneJump");
+}
+
+/*Fade Button*/
+let fade = document.querySelector("#fade");
+
+fade.addEventListener("click", fadeHero);
+
+function fadeHero (){
+    console.log("I fade");
+    alvarHero.classList.add("fadecss");
+}
+
+
+/*Remove Fade Button*/
+
+alvarHero.addEventListener("animationend", fadeRemove);
+
+function fadeRemove (){
+    console.log ("I'll be back");
+    alvarHero.classList.remove("fadecss");
 }

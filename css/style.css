@@ -63,7 +63,7 @@
 /* one jump*/
 
 .oneJump {
-    animation: herojump 2s ease-in forwards;
+    animation: herojump 1s ease-out forwards;
 }
 
 @keyframes herojump {
@@ -73,5 +73,20 @@
     }
     50% {
         bottom: 200px;
+    }
+}
+
+/*fade*/
+
+.fadecss {
+    animation: fadeHero 3s forwards;
+}
+
+@keyframes fadeHero {
+    0%{
+        opacity:100;
+    }
+    100%{
+        opacity: 0;
     }
 }
