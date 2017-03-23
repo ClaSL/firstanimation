@@ -100,3 +100,9 @@ function fadeRemove (){
     console.log ("I'll be back");
     alvarHero.classList.remove("fadecss");
 }
+
+/*SOUND*/
+
+let MovieSound = document.querySelector("#moviesound");
+MovieSound.addEventListener("ended", fadeHero);
+
