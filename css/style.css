@@ -1,6 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+
+/* Buttons boxes*/
+
+.Buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .kitchen {
     background-image: url(../img/kitchen.svg);
-    width: 100vw;
+    width: 100%;
     height: 60vh;
     background-size: contain;
     background-repeat: no-repeat;
@@ -18,7 +34,7 @@
 /* First move*/
 
 .move {
-    animation: moveanimation 2s ease-in;
+    animation: moveanimation 1.5s ease-in;
 }
 
 @keyframes moveanimation {
@@ -34,7 +50,7 @@
 /*Move to 30*/
 
 .movetothirty {
-    animation: moveingto 2s forwards;
+    animation: moveingto 2s;
 }
 
 @keyframes moveingto {
@@ -46,24 +62,27 @@
     }
 }
 
+
 /*Move from 30*/
-.movefromthirty{
+
+.movefromthirty {
     animation: movefromthirty 2s forwards;
 }
 
-@keyframes movefromthirty{
-    0%{
+@keyframes movefromthirty {
+    0% {
         transform: translate(30%);
     }
-    100%{
+    100% {
         transform: translate(100vw);
     }
 }
 
+
 /* one jump*/
 
 .oneJump {
-    animation: herojump 1s ease-out forwards;
+    animation: herojump .3s ease-out forwards;
 }
 
 @keyframes herojump {
@@ -72,9 +91,13 @@
         bottom: 0;
     }
     50% {
-        bottom: 200px;
+        bottom: 70px;
+    }
+    90% {
+        bottom: -30px;
     }
 }
+
 
 /*fade*/
 
@@ -83,10 +106,94 @@
 }
 
 @keyframes fadeHero {
-    0%{
-        opacity:100;
+    0% {
+        opacity: 100;
     }
-    100%{
+    100% {
         opacity: 0;
     }
+}
+
+
+/*SCALE*/
+
+.scaleanimation {
+    animation: scaling 1s 1;
+}
+
+@keyframes scaling {
+    0%,
+    100% {
+        height: 300px;
+    }
+    50% {
+        height: 80vh;
+    }
+}
+
+
+/*FALL*/
+
+.fall {
+    animation: falling 1.5s;
+}
+
+@keyframes falling {
+    to {
+        transform: translateY(80vh) rotate(400deg);
+    }
+}
+
+
+/*Shake*/
+
+.shake {
+    animation: shaking .5s;
+}
+
+@keyframes shaking {
+    20%,
+    60% {
+        transform: translateX(10%) rotate(6deg);
+    }
+    40%,
+    80% {
+        transform: translateX(-5%) rotate(-3deg);
+    }
+}
+
+
+/*Glow*/
+
+.heroglowing {
+    animation: heroglow .5s 3;
+}
+
+@keyframes heroglow {
+    0% {
+        -webkit-filter: brightness(1);
+        filter: brightness(1);
+    }
+    100% {
+        -webkit-filter: brightness(2);
+        filter: brightness(2);
+    }
+}
+
+
+/*mirror*/
+
+.mirrorhero {
+    animation: mirrorheroing 2s;
+}
+
+@keyframes mirrorheroing{
+     50%{
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
 }
